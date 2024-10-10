@@ -1,14 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
+
 import Header from './components/Header';
 import study from './assets/images/study.png';
 import bell from './assets/images/bell.png';
 import boy from './assets/images/boy.png';
 import coinIcon from './assets/images/star.png';
-import left from './assets/images/left-arrow.png';
-import right from './assets/images/arrow-right.png';
 import clockIcon from './assets/images/clock.png'; 
 import bookIcon from './assets/images/chapter.png'; 
-import { Link } from 'react-router-dom'; 
 
 export const courses = [
     {
@@ -150,8 +149,6 @@ const Course = () => {
       <div className="course-layout">
         <div className="course-head">
           <h1>Basic Courses</h1>
-          <img src={left} alt="left" className="arrow-icon" />
-          <img src={right} alt="right" className="arrow-icon" />
         </div>
       </div>
 

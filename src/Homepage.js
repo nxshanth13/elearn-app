@@ -32,9 +32,7 @@ const Homepage = () => {
 
             <p>
               Everyone agrees with the fact that learning management systems are
-              <br />
               a tremendous way to expand learners' knowledge base and help staff
-              <br />
               enhance their skills.
             </p>
 
@@ -69,9 +67,7 @@ const Homepage = () => {
           <div className="right-content1">
             <p>
               With high social media impact levels, video content
-              <br />
               has become extremely popular among us. People
-              <br />
               used to video content.
             </p>
             <button className="fancy-button">View all courses</button>
@@ -111,16 +107,12 @@ const Homepage = () => {
           <div className="text-content">
             <h1>
               Smart classes
-              <br />
               with instructors
-              <br />
               in private
             </h1>
             <p>
               Everyone agrees with the fact that learning management systems are
-              <br />
               the tremendous way to expand learner's knowledge base and help staff
-              <br />
               enhance their skills.
             </p>
             <button className='enroll-btn'>Enroll Course</button>
@@ -150,17 +142,13 @@ const Homepage = () => {
           <div className="right-4">
             <h1>
               Take test
-              <br />
               and get
-              <br />
               instant results
             </h1>
 
             <p>
               Everyone agrees with the fact that learning management systems are
-              <br />
               the tremendous way to expand learner's knowledge base and help staff
-              <br />
               enhance their skills.
             </p>
 

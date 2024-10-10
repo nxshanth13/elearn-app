@@ -1,17 +1,23 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { courses } from './Courses'; 
-import Header from './components/Header';
-import boy from './assets/images/boy.png';
-import bell from './assets/images/bell.png'; 
-import coinIcon from './assets/images/star.png'; 
-import level from './assets/images/level.png'; 
-import mentor from './assets/images/user.png';
-import { FaCheckCircle, FaPlayCircle, FaLock } from 'react-icons/fa'; 
+import { useParams, Link, useNavigate } from 'react-router-dom';
+
+import { courses } from '../Courses'; 
+import Header from './Header';
+import Footer from './Footer';
+
+import boy from '../assets/images/boy.png';
+import bell from '../assets/images/bell.png'; 
+import coinIcon from '../assets/images/star.png'; 
+import level from '../assets/images/level.png'; 
+import mentor from '../assets/images/user.png';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckCircle, faPlayCircle, faLock} from '@fortawesome/free-solid-svg-icons'; 
 
 const Courseoverview = () => {
   const { id } = useParams();
   const course = courses.find(c => c.id === parseInt(id));
+  const navigate = useNavigate();
   console.log("Course ID:", id);
 
   if (!course) {
@@ -92,7 +98,7 @@ const Courseoverview = () => {
           />
           <div className="course-enroll">
             <span className="course-price">Free</span>
-            <button className="enroll-button">Enroll Now</button>
+            <button className="enroll-button" onClick={()=>navigate(`/learn/${id}/home`)}>Enroll Now</button>
           </div>
 
           <div className="course-features">
@@ -118,14 +124,16 @@ const Courseoverview = () => {
                 <span className="lesson-title">{chapter.title}</span>
               </div>
               <div className="lesson-icon">
-                {chapter.status === 'completed' && <FaCheckCircle color="green" />}
-                {chapter.status === 'in-progress' && <FaPlayCircle color="purple" />}
-                {chapter.status === 'locked' && <FaLock color="gray" />}
+                {chapter.status === 'completed' && <FontAwesomeIcon icon={faCheckCircle} style={{color:'green'}} />}
+                {chapter.status === 'in-progress' && <FontAwesomeIcon icon={faPlayCircle} style={{color:'purple'}} />}
+                {chapter.status === 'locked' && <FontAwesomeIcon icon={faLock} style={{color:'gray'}} />}
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      <Footer />
     </>
   );
 };
