@@ -24,9 +24,7 @@ const Homepage = () => {
           <div className="left-content">
             <h1 className="main-title">
               Develop <span className="highlight">skills</span>
-              <br />
               from the best
-              <br />
               source
             </h1>
 
