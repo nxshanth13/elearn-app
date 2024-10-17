@@ -57,6 +57,11 @@ h1{
   font-weight: bold;
   color: var(--maindark);
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-links li:hover{
+  text-decoration: underline;
 }
 
 .main-logo {
@@ -616,6 +621,150 @@ form.sign-in-form {
 }
 
 
+/* 4. Course Module Component */
+
+
+.modulePage {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  height: auto;
+}
+
+.moduleSidebar {
+  width: 25%;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.moduleSidebar h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.moduleSidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.moduleSidebar li {
+  margin-bottom: 10px;
+}
+
+.moduleSidebar li button {
+  background: none;
+  border: none;
+  color: #007BFF;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+  text-align: left;
+  width: 100%;
+}
+
+.moduleSidebar li button:hover {
+  background-color: #e9ecef;
+}
+
+.moduleSidebar li.active button {
+  background-color: #007BFF;
+  color: white;
+}
+
+.moduleContent {
+  width: 75%;
+  padding: 40px;
+}
+
+.moduleContent h3 {
+  margin-bottom: 20px;
+  color: #007BFF;
+}
+
+.contentSection {
+  font-size: 18px;
+  line-height: 1.6;
+  width: 100%;
+  height: 100%;
+}
+
+.contentSection iframe, .contentSection audio {
+  width: 100%;
+  height: 90%;
+}
+
+
+
+/* 5. Accordion */
+
+
+.accordion {
+  width: 100%;
+  margin: 10px auto;
+  border-radius: 8px;
+}
+
+.accordionItem {
+  border: 1px solid #ddd;
+  margin: 10px auto;
+  font-family: var(--subfont);
+}
+
+.accordionItem:last-child {
+  border-bottom: none;
+}
+
+.accordionHeader {
+  background-color: #f9f9f9;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.accordionHeader h2 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.accordionHeader span {
+  font-size: 1.5rem;
+}
+
+.accordionContent {
+  background-color: #fff;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.accordionContent p{
+  margin: 0 !important;
+}
+
+.accordionContent button{
+  padding: 7px 15px;
+  background-color: transparent;
+  border: 2px solid var(--maincolor);
+  color: var(--maincolor);
+  cursor: pointer;
+  margin: 10px 0;
+  transition: 0.4s;
+  text-transform: uppercase;
+  font-family: var(--subfont);
+  font-weight: 600;
+}
+.accordionContent button:hover{
+  background-color: var(--maincolor);
+  color: white;
+}
+
+
 /* Pages */
 
 
@@ -661,6 +810,11 @@ form.sign-in-form {
   border: none;
   border-radius: 25px;
   cursor: pointer;
+  transition: 0.4s;
+}
+
+.enroll-btn:hover{
+  border-radius: 5px;
 }
 
 .right-content{
@@ -1104,7 +1258,12 @@ form.sign-in-form {
   cursor: pointer;
 }
 
-/* Course List  */
+
+
+/* 3. Course List  */
+
+
+
 .course-list {
   display: flex;
   justify-content: space-between;
@@ -1122,6 +1281,11 @@ form.sign-in-form {
   width: 30%;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   margin: 10px 0;
+  transition: 0.3s;
+}
+
+.course-card:hover{
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
 .course-card img {
@@ -1211,7 +1375,7 @@ form.sign-in-form {
 .course-info {
   font-family: var(--subfont);
   flex: 2;
-  padding: 15px 0;
+  padding: 15px;
   margin-right: 20px;
 }
 
@@ -1269,6 +1433,14 @@ form.sign-in-form {
 
 .course-enroll {
   margin-bottom: 20px;
+}
+
+.course-price{
+  padding: 5px !important;
+  font-size: 14px !important;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-right: 20px;
 }
 
 .course-enroll .course-price {
@@ -1403,78 +1575,199 @@ form.sign-in-form {
 
 
 /* 4. Course Home Page */
-.courseHomeMain{
+
+
+
+.courseHomeNav {
   display: flex;
-  column-gap: 30px;
   justify-content: space-between;
-  padding: 20px;
-  height: 85vh;
-  overflow-y: hidden;
+  padding: 15px 40px;
+  height: auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.leftCourseHome{
+.courseHomeNav > div:first-child {
   display: flex;
-  flex-basis: 40%;
-  padding-left: 30px;
-  flex-direction: column;
-  row-gap: 20px;
+  column-gap: 25px;
+  align-items: center;
 }
 
-.courseHomeMain p {
-  margin: 0 !important;
-}
-
-.rightCourseHome{
-  display: flex;
-  flex-direction: column;
-  overflow-y: scroll;
-  row-gap: 20px;
-}
-
-.topRightCourseHome{
-  display: flex;
-  height: 250px;
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  padding: 30px;
-  margin-right: 20px;
-  align-items: flex-start;
-  column-gap: 50px;
-}
-.topRightCourseHome h3{
-  font-family: var(--mainfont);
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-.topRightCourseHome h4{
-  font-weight: 400;
-}
-.topRightCourseHome>img{
-  height: 150px;
-}
-
-.rightCourseHome>h1{
-  font-family: var(--mainfont);
-}
-
-.moduleSummary{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  row-gap: 5px;
-}
-.moduleSummary>*{
-  font-weight: 400;
-  font-size: 18px;
-}
-.moduleSummary>button{
-  padding: 7px 15px;
-  background-color: var(--maincolor);
-  border: none;
-  color: white;
-  border-radius: 5px;
+.courseHomeNav h3{
+  font-family: var(--subfont);
+  font-size: 15px;
+  font-weight: 300;
   cursor: pointer;
 }
 
+.courseHomeNav h3:hover{
+  text-decoration: underline;
+}
+
+.courseHomeNav h1{
+  font-family: var(--mainfont);
+  color: var(--maincolor);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.profileDiv{
+  display: flex;
+  column-gap: 5px;
+  align-items: center;
+  cursor: pointer;
+}
+.profileDiv svg{
+  background-color: var(--maincolor);
+  padding: 5px 6px;
+  color: white;
+  border-radius: 50%;
+}
+.profileDiv h2{
+  font-size: 14px;
+}
+.profileDiv h2:hover{
+  text-decoration: underline;
+}
+
+.courseHomeMain {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  height: 90vh;
+}
+
+.leftCourseHome {
+  width: 25%;
+  padding: 20px;
+  background-color: #fff;
+  border-right: 2px solid #ddd;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  top: 0;
+  font-family: var(--subfont);
+}
+
+.leftCourseHome h2{
+  text-transform: uppercase;
+}
+
+.list-elements {
+  padding: 15px;
+  font-size: 18px;
+  margin: 0;
+  cursor: pointer;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.list-elements:hover {
+  background-color: #fac77085;
+}
+
+.activeEle {
+  background-color: #ffd966;
+  border-left: 5px solid #ff9933;
+}
+
+.rightCourseHome {
+  width: 75%;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.topRightCourseHome {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.topRightCourseHome img {
+  max-width: 150px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.moduleList {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.moduleCard {
+  padding: 20px;
+}
+
+.moduleCard h2 {
+  margin-bottom: 10px;
+}
+
+.moduleCard button {
+  background-color: #ff9933;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.moduleCard button:hover {
+  background-color: #cc7a00;
+}
+
+.moduleCard p{
+  margin: 0 !important;
+}
+
+.borderBox {
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.moduleAccordion {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.moduleCard {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.moduleHeader {
+  background-color: #f7f7f7;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.moduleHeader h2 {
+  margin: 0;
+}
+
+.moduleContent {
+  padding: 10px;
+  background-color: #fefefe;
+  border-top: 1px solid #ddd;
+}
+
+.minisection {
+  margin-bottom: 10px;
+}
+
+.minisection h3 {
+  margin: 5px 0;
+}
 
 /* about section */
 .about-section {
