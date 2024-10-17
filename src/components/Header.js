@@ -10,9 +10,9 @@ const Header = () => {
     <header className="header">
       <nav className="navbar">
         <ul className="nav-links">
-          <li>Instructors</li>
+          <li onClick={()=>{navigate('/')}}>Home</li>
           <li onClick={()=>{navigate('/course')}}>Courses</li>
-          <li>Careers</li>
+          <li onClick={()=>{navigate('/about')}}>About us</li>
         </ul>
         <div className="main-logo">
           FLUENT PATH

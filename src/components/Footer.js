@@ -55,9 +55,7 @@ const Footer = () => {
                 <h2>Fluent Path</h2>
             </div>
             <ul class="legal">
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Cookies</a></li>
+                <p>Copyright © 2024 | Powered by Flanzer</p>
             </ul>
             <div class="social-icons">
                 <a href="#"><FontAwesomeIcon icon={faLinkedinIn} /></a>

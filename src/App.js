@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Homepage from './Homepage'; 
 import Getstarted from './components/Getstarted';
+import About from './components/Aboutus';
+
 
 import Course from './Courses'; 
 import Courseoverview from './components/Courseoverview'; 
@@ -15,6 +17,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/getstarted" element={<Getstarted />} />
+        <Route path="/about" element={<About />} />
+
 
         <Route path="course" element={<Course />} />
         <Route path="course/:id" element={<Courseoverview />} /> 
