@@ -42,7 +42,7 @@ const CourseHome = () => {
         <>
             <nav className="courseHomeNav">
                 <div>
-                    <h1 onClick={()=>{navigate('/')}}>FLUENT PATH</h1>
+                    <h1 onClick={()=>{navigate('/')}}>FLUENTPATH</h1>
                     <h3 onClick={()=>{navigate('/course')}}>Courses</h3>
                 </div>
                 <div className="profileDiv" >

@@ -1,18 +1,23 @@
 import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 
-import { courses } from '../Courses'; 
+import { courses } from '../Courses';
 import Header from './Header';
 import Footer from './Footer';
 
 import boy from '../assets/images/boy.png';
-import bell from '../assets/images/bell.png'; 
-import coinIcon from '../assets/images/star.png'; 
-import level from '../assets/images/level.png'; 
+import bell from '../assets/images/bell.png';
+import coinIcon from '../assets/images/star.png';
+import level from '../assets/images/level.png';
 import mentor from '../assets/images/user.png';
+import access from '../assets/images/access.png';
+import download from '../assets/images/downloads.png';
+import quiz from '../assets/images/assignment.png';
+import basic from '../assets/images/cube.png';
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheckCircle, faPlayCircle, faLock} from '@fortawesome/free-solid-svg-icons'; 
+import { faCheckCircle, faPlayCircle, faLock } from '@fortawesome/free-solid-svg-icons';
 
 const Courseoverview = () => {
   const { id } = useParams();
@@ -96,17 +101,31 @@ const Courseoverview = () => {
             alt="Course"
             className="course-image"
           />
+
           <div className="course-enroll">
             <span className="course-price">Free</span>
-            <button className="enroll-button" onClick={()=>navigate(`/learn/${id}/home`)}>Enroll Now</button>
+            <button className="enroll-button" onClick={() => navigate(`/learn/${id}/home`)}>Enroll Now</button>
           </div>
 
           <div className="course-features">
-            <h3>This course includes:</h3>
-            <ul>
-              <li>15 Chapters</li>
-              <li>Certificate of Completion</li>
-              <li>Lifetime Access</li>
+            <h1 style={{ fontSize: '20px', marginBottom: '5px' }}>This course includes:</h1>
+            <ul className="course-features">
+              <li>
+                <img src={access} alt="Lifetime Access" className="icon" />
+                Lifetime Access
+              </li>
+              <li>
+                <img src={download} alt="Downloadable Resources" className="icon" />
+                Downloadable Resources
+              </li>
+              <li>
+                <img src={quiz} alt="Quizzes and Assignments" className="icon" />
+                Quizzes and Assignments
+              </li>
+              <li>
+                <img src={basic} alt="No Prerequisites Required" className="icon" />
+                No Prerequisites Required
+              </li>
             </ul>
           </div>
         </div>
@@ -124,9 +143,9 @@ const Courseoverview = () => {
                 <span className="lesson-title">{chapter.title}</span>
               </div>
               <div className="lesson-icon">
-                {chapter.status === 'completed' && <FontAwesomeIcon icon={faCheckCircle} style={{color:'green'}} />}
-                {chapter.status === 'in-progress' && <FontAwesomeIcon icon={faPlayCircle} style={{color:'purple'}} />}
-                {chapter.status === 'locked' && <FontAwesomeIcon icon={faLock} style={{color:'gray'}} />}
+                {chapter.status === 'completed' && <FontAwesomeIcon icon={faCheckCircle} style={{ color: 'green' }} />}
+                {chapter.status === 'in-progress' && <FontAwesomeIcon icon={faPlayCircle} style={{ color: 'purple' }} />}
+                {chapter.status === 'locked' && <FontAwesomeIcon icon={faLock} style={{ color: 'gray' }} />}
               </div>
             </div>
           ))}

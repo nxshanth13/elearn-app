@@ -1,26 +1,24 @@
 /* Pre-requisitary */
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-:root{
-  --mainfont: 'Chakra Petch';
-  --subfont: 'Montserrat';
+:root {
+  --mainfont: "Chakra Petch";
+  --subfont: "Montserrat";
 
-  --mainlightbg: #FAC770;
+  --mainlightbg: #fac770;
   --maincolor: #f47920;
   --maindark: #333;
   --lightbg: #f8fffc;
 }
 
-
-h1{
-  font-family:'Chakra Petch';
+h1 {
+  font-family: "Chakra Petch";
 }
-
 
 /* Components */
 
@@ -40,7 +38,7 @@ h1{
   width: 90%;
 }
 
-.nav-right{
+.nav-right {
   display: flex;
   align-items: center;
   column-gap: 30px;
@@ -60,7 +58,7 @@ h1{
   transition: 0.3s;
 }
 
-.nav-links li:hover{
+.nav-links li:hover {
   text-decoration: underline;
 }
 
@@ -71,9 +69,7 @@ h1{
   font-size: 23px;
 }
 
-
 /* 2. Footer */
-
 
 footer {
   background-color: #f9f0e4;
@@ -119,7 +115,7 @@ footer {
   color: var(--maincolor);
 }
 
-.footer-section > p{
+.footer-section > p {
   font-size: 12px;
 }
 
@@ -225,10 +221,9 @@ footer {
   }
 }
 
-p{
-  font-family:'Montserrat';
+p {
+  font-family: "Montserrat";
 }
-
 
 /* 3. Signup */
 
@@ -389,7 +384,7 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, var(--maincolor) 0%, #FFA41B 100%);
+  background-image: linear-gradient(-45deg, var(--maincolor) 0%, #ffa41b 100%);
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -620,9 +615,7 @@ form.sign-in-form {
   }
 }
 
-
 /* 4. Course Module Component */
-
 
 .modulePage {
   display: flex;
@@ -635,7 +628,7 @@ form.sign-in-form {
   width: 25%;
   background-color: #f4f4f4;
   padding: 20px;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .moduleSidebar h2 {
@@ -655,7 +648,7 @@ form.sign-in-form {
 .moduleSidebar li button {
   background: none;
   border: none;
-  color: #007BFF;
+  color: #007bff;
   cursor: pointer;
   padding: 10px;
   font-size: 16px;
@@ -668,7 +661,7 @@ form.sign-in-form {
 }
 
 .moduleSidebar li.active button {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: white;
 }
 
@@ -679,7 +672,7 @@ form.sign-in-form {
 
 .moduleContent h3 {
   margin-bottom: 20px;
-  color: #007BFF;
+  color: #007bff;
 }
 
 .contentSection {
@@ -689,15 +682,13 @@ form.sign-in-form {
   height: 100%;
 }
 
-.contentSection iframe, .contentSection audio {
+.contentSection iframe,
+.contentSection audio {
   width: 100%;
   height: 90%;
 }
 
-
-
 /* 5. Accordion */
-
 
 .accordion {
   width: 100%;
@@ -743,11 +734,11 @@ form.sign-in-form {
   font-size: 1rem;
 }
 
-.accordionContent p{
+.accordionContent p {
   margin: 0 !important;
 }
 
-.accordionContent button{
+.accordionContent button {
   padding: 7px 15px;
   background-color: transparent;
   border: 2px solid var(--maincolor);
@@ -759,21 +750,18 @@ form.sign-in-form {
   font-family: var(--subfont);
   font-weight: 600;
 }
-.accordionContent button:hover{
+.accordionContent button:hover {
   background-color: var(--maincolor);
   color: white;
 }
 
-
 /* Pages */
-
 
 /* 1. Home Page*/
 
 /* section 1 */
 
-
-.home-wrapper{
+.home-wrapper {
   background-color: var(--mainlightbg);
 }
 
@@ -793,7 +781,7 @@ form.sign-in-form {
   font-family: var(--subfont);
 }
 
-.main-title{
+.main-title {
   font-size: 65px;
   font-family: var(--mainfont);
   color: var(--maindark);
@@ -802,8 +790,8 @@ form.sign-in-form {
   margin-bottom: 20px;
 }
 
-.enroll-btn{
-  background-color: #F16D34;
+.enroll-btn {
+  background-color: #f16d34;
   color: #fff;
   padding: 12px 24px;
   font-size: 16px;
@@ -813,11 +801,11 @@ form.sign-in-form {
   transition: 0.4s;
 }
 
-.enroll-btn:hover{
+.enroll-btn:hover {
   border-radius: 5px;
 }
 
-.right-content{
+.right-content {
   position: relative;
 }
 
@@ -830,8 +818,8 @@ form.sign-in-form {
 }
 
 .highlight {
-  background-color: #FFE5AC;
-  color: #F16D34;
+  background-color: #ffe5ac;
+  color: #f16d34;
   padding: 8px 12px;
   border-radius: 50px;
   display: inline-block;
@@ -853,20 +841,17 @@ form.sign-in-form {
   }
 }
 
-
-
 /* section 2 */
 
-
 .body2 {
-  background-color: #D0F0E4;
+  background-color: #d0f0e4;
 }
 
 .section2 {
   display: flex;
   align-items: flex-end;
   column-gap: 250px;
-  padding: 70px 0 50px 180px; 
+  padding: 70px 0 50px 180px;
 }
 
 .specially-wrapper {
@@ -926,7 +911,6 @@ form.sign-in-form {
 
 /* Card Section Styling */
 
-
 .card-section {
   display: flex;
   justify-content: space-between;
@@ -935,7 +919,7 @@ form.sign-in-form {
 }
 
 .card {
-  background-color: #FFF6E3;
+  background-color: #fff6e3;
   border-radius: 10px;
   padding: 22px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -976,15 +960,11 @@ form.sign-in-form {
   }
 }
 
-
-
 /* section 3 */
 
-
-.body3{
+.body3 {
   background-color: var(--lightbg);
 }
-
 
 .body3 .content-section {
   display: flex;
@@ -1004,12 +984,12 @@ form.sign-in-form {
   align-items: flex-start;
 }
 
-.text-content > h1{
+.text-content > h1 {
   font-family: var(--mainfont);
   font-size: 50px;
 }
 
-.text-content > p{
+.text-content > p {
   font-family: var(--subfont);
 }
 
@@ -1026,7 +1006,7 @@ form.sign-in-form {
   margin-top: 50px;
 }
 
-.body4{
+.body4 {
   background-color: var(--lightbg);
   width: 100%;
   height: auto;
@@ -1054,7 +1034,7 @@ form.sign-in-form {
   flex-basis: 50%;
 }
 
-.right-4 > h1{
+.right-4 > h1 {
   font-family: var(--mainfont);
   font-size: 50px;
   color: var(--maindark);
@@ -1064,22 +1044,16 @@ form.sign-in-form {
   width: 70%;
 }
 
-
-
-
-
 /* Section - 5 */
 
-
-
-.body5{
+.body5 {
   width: 100%;
   height: auto;
   padding: 20px 0;
   background-color: var(--lightbg);
 }
 
-.community-section{
+.community-section {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -1087,14 +1061,14 @@ form.sign-in-form {
   text-align: center;
 }
 
-.community-section > h1{
+.community-section > h1 {
   font-family: var(--mainfont);
   font-size: 50px;
   max-width: 550px;
   color: var(--maindark);
 }
 
-.community-section > p{
+.community-section > p {
   max-width: 800px;
 }
 
@@ -1121,7 +1095,6 @@ form.sign-in-form {
   color: #333;
   margin-bottom: 20px;
   font-family: var(--mainfont);
-  
 }
 
 .course-intro p {
@@ -1165,7 +1138,7 @@ form.sign-in-form {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #D0F0E4;
+  background-color: #d0f0e4;
   margin-top: 20px;
   border-radius: 20px;
 }
@@ -1190,7 +1163,7 @@ form.sign-in-form {
 }
 
 .username {
-  color: #f16d34; 
+  color: #f16d34;
 }
 
 .profile-text p {
@@ -1207,7 +1180,7 @@ form.sign-in-form {
 .notification-icon {
   width: 24px;
   height: 24px;
-  margin-right: 20px; 
+  margin-right: 20px;
 }
 
 .coins {
@@ -1231,38 +1204,31 @@ form.sign-in-form {
   font-family: var(--mainfont);
 }
 
-
 .course-layout {
-  max-width: 1200px; 
-  margin: 0 auto; 
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 .course-head {
   display: flex;
-  align-items:'center';
-  justify-content:'space-between';
+  align-items: "center";
+  justify-content: "space-between";
 }
-
 
 .course-head h1 {
   font-size: 24px;
   margin: 0;
 }
 
-
 .arrow-icon {
-  width: 24px; 
+  width: 24px;
   height: 24px;
   cursor: pointer;
 }
 
-
-
 /* 3. Course List  */
-
-
 
 .course-list {
   display: flex;
@@ -1284,7 +1250,7 @@ form.sign-in-form {
   transition: 0.3s;
 }
 
-.course-card:hover{
+.course-card:hover {
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -1292,11 +1258,11 @@ form.sign-in-form {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  padding:5px
+  padding: 5px;
 }
 
 .course-details img.icon {
-  width:35px;
+  width: 35px;
   height: 35px;
   vertical-align: middle;
 }
@@ -1305,8 +1271,6 @@ form.sign-in-form {
   margin-right: 5px;
   vertical-align: middle;
 }
-
-
 
 .course-info h3 {
   font-size: 18px;
@@ -1318,7 +1282,7 @@ form.sign-in-form {
   font-size: 16px;
   color: #777;
   margin: 10px 0;
-  font-family:var(--subfont);
+  font-family: var(--subfont);
 }
 
 .course-link {
@@ -1352,18 +1316,17 @@ form.sign-in-form {
   margin-bottom: 20px;
 }
 
-.course-nav{
-  margin:0 auto;
-  max-width:1200px;
-  margin-top:20px
+.course-nav {
+  margin: 0 auto;
+  max-width: 1200px;
+  margin-top: 20px;
 }
 
-.course-topic{
+.course-topic {
   margin: 0;
-  background-color:'#f16d34';
-  color:'white';
+  background-color: "#f16d34";
+  color: "white";
 }
-
 
 .course-detail-container {
   display: flex;
@@ -1422,7 +1385,6 @@ form.sign-in-form {
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   background-color: #fff;
-  text-align: center;
 }
 
 .course-sidebar .course-image {
@@ -1435,12 +1397,13 @@ form.sign-in-form {
   margin-bottom: 20px;
 }
 
-.course-price{
+.course-price {
   padding: 5px !important;
   font-size: 14px !important;
   text-transform: uppercase;
   font-weight: 500;
   margin-right: 20px;
+  background-color: #6b4eff;
 }
 
 .course-enroll .course-price {
@@ -1461,6 +1424,7 @@ form.sign-in-form {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+  margin-left: 50px;
 }
 
 .course-enroll .enroll-button:hover {
@@ -1478,29 +1442,39 @@ form.sign-in-form {
 }
 
 .course-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 10px;
   font-size: 14px;
+  font-family: var(--subfont);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
 }
 
 .course-know {
   display: flex;
-  gap: 30px; 
-  align-items: center; 
+  gap: 30px;
+  align-items: center;
 }
 
-.mentor-info, .level-info {
+.mentor-info,
+.level-info {
   display: flex;
-  align-items: center; 
-  gap: 5px; 
+  align-items: center;
+  gap: 5px;
 }
 
 .icon {
-  width: 25px; 
+  width: 25px;
   height: 25px;
 }
 
-.lesson-section{
-  max-width:1200px;
+.lesson-section {
+  max-width: 1200px;
   margin: 0 auto;
   margin-bottom: 20px;
 }
@@ -1544,7 +1518,6 @@ form.sign-in-form {
   font-size: 24px;
 }
 
-
 .lesson-item.completed {
   background-color: #e6ffe6;
   border: 1px solid #4caf50;
@@ -1570,13 +1543,7 @@ form.sign-in-form {
   color: #aaa;
 }
 
-
-
-
-
 /* 4. Course Home Page */
-
-
 
 .courseHomeNav {
   display: flex;
@@ -1592,18 +1559,18 @@ form.sign-in-form {
   align-items: center;
 }
 
-.courseHomeNav h3{
+.courseHomeNav h3 {
   font-family: var(--subfont);
   font-size: 15px;
   font-weight: 300;
   cursor: pointer;
 }
 
-.courseHomeNav h3:hover{
+.courseHomeNav h3:hover {
   text-decoration: underline;
 }
 
-.courseHomeNav h1{
+.courseHomeNav h1 {
   font-family: var(--mainfont);
   color: var(--maincolor);
   border-right: 1px solid rgba(0, 0, 0, 0.2);
@@ -1611,22 +1578,22 @@ form.sign-in-form {
   cursor: pointer;
 }
 
-.profileDiv{
+.profileDiv {
   display: flex;
   column-gap: 5px;
   align-items: center;
   cursor: pointer;
 }
-.profileDiv svg{
+.profileDiv svg {
   background-color: var(--maincolor);
   padding: 5px 6px;
   color: white;
   border-radius: 50%;
 }
-.profileDiv h2{
+.profileDiv h2 {
   font-size: 14px;
 }
-.profileDiv h2:hover{
+.profileDiv h2:hover {
   text-decoration: underline;
 }
 
@@ -1650,7 +1617,7 @@ form.sign-in-form {
   font-family: var(--subfont);
 }
 
-.leftCourseHome h2{
+.leftCourseHome h2 {
   text-transform: uppercase;
 }
 
@@ -1720,7 +1687,7 @@ form.sign-in-form {
   background-color: #cc7a00;
 }
 
-.moduleCard p{
+.moduleCard p {
   margin: 0 !important;
 }
 
@@ -1775,9 +1742,9 @@ form.sign-in-form {
   justify-content: space-between;
   align-items: flex-start;
   padding: 20px;
-  gap: 30px; 
-  max-width:1400px;
-  margin:0 auto;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .about-left {
@@ -1798,7 +1765,7 @@ form.sign-in-form {
 .about-right {
   flex: 2;
   padding-left: 20px;
-  margin-top:40px;
+  margin-top: 40px;
 }
 
 .about-right p {
@@ -1806,7 +1773,6 @@ form.sign-in-form {
   font-size: 17px;
   line-height: 1.6;
 }
-
 
 @media (max-width: 768px) {
   .about-section {
@@ -1828,23 +1794,23 @@ form.sign-in-form {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  max-width:1400px;
-  margin:0 auto;
+  max-width: 1400px;
+  margin: 0 auto;
   margin-top: 50px;
 }
 
 .mission-left {
-  flex: 1; 
+  flex: 1;
 }
 
-.mission-left>h1{
-  margin-bottom:20px;
-  margin-left:20px;
+.mission-left > h1 {
+  margin-bottom: 20px;
+  margin-left: 20px;
 }
 
 .card-section {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 .card {

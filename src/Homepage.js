@@ -23,8 +23,8 @@ const Homepage = () => {
         <div className="landing-section" id="home">
           <div className="left-content">
             <h1 className="main-title">
-              Develop <span className="highlight">skills</span>
-              from the best
+              Develop <span className="highlight">skills</span><br/>
+            from the best
               source
             </h1>
 

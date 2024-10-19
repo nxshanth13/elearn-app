@@ -15,7 +15,10 @@ const Header = () => {
           <li onClick={()=>{navigate('/about')}}>About us</li>
         </ul>
         <div className="main-logo">
-          FLUENTPATH
+        <h1 onClick={()=>{navigate('/')}} style={{ cursor: 'pointer' }}>
+        FLUENTPATH
+      </h1>
+
         </div>
         <div className='nav-right'>
           <ul className="nav-links">
