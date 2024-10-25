@@ -15,7 +15,7 @@ const CourseHome = () => {
         {
             name: 'Introduction',
             time: '1hr',
-            status: 'Ongoing',
+            status: 'Completed',
             quiz: 'Not Taken',
         },
         {
@@ -27,13 +27,13 @@ const CourseHome = () => {
         {
             name: 'Advanced Concepts',
             time: '1hr',
-            status: 'Ongoing',
+            status: 'Locked',
             quiz: 'Not Taken',
         },
         {
             name: 'Final Project',
             time: '1hr',
-            status: 'Ongoing',
+            status: 'Locked',
             quiz: 'Not Taken',
         }
     ];

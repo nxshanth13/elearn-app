@@ -143,8 +143,16 @@ const Courseoverview = () => {
                 <span className="lesson-title">{chapter.title}</span>
               </div>
               <div className="lesson-icon">
-                {chapter.status === 'completed' && <FontAwesomeIcon icon={faCheckCircle} style={{ color: 'green' }} />}
-                {chapter.status === 'in-progress' && <FontAwesomeIcon icon={faPlayCircle} style={{ color: 'purple' }} />}
+                {chapter.status === 'completed' && 
+                <>
+                  <p>COMPLETED</p>
+                  <FontAwesomeIcon icon={faCheckCircle} style={{ color: 'green' }} />
+                </>}
+                {chapter.status === 'in-progress' && 
+                <>
+                  <p>ONGOING</p>
+                  <FontAwesomeIcon icon={faPlayCircle} style={{ color: 'purple' }} />
+                </>}
                 {chapter.status === 'locked' && <FontAwesomeIcon icon={faLock} style={{ color: 'gray' }} />}
               </div>
             </div>

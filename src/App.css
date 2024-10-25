@@ -648,7 +648,7 @@ form.sign-in-form {
 .moduleSidebar li button {
   background: none;
   border: none;
-  color: #007bff;
+  color: var(--maincolor);
   cursor: pointer;
   padding: 10px;
   font-size: 16px;
@@ -661,7 +661,7 @@ form.sign-in-form {
 }
 
 .moduleSidebar li.active button {
-  background-color: #007bff;
+  background-color: var(--maincolor);
   color: white;
 }
 
@@ -672,7 +672,7 @@ form.sign-in-form {
 
 .moduleContent h3 {
   margin-bottom: 20px;
-  color: #007bff;
+  color: var(--maincolor);
 }
 
 .contentSection {
@@ -698,6 +698,7 @@ form.sign-in-form {
 
 .accordionItem {
   border: 1px solid #ddd;
+  border-radius: 5px 5px 0 0;
   margin: 10px auto;
   font-family: var(--subfont);
 }
@@ -707,7 +708,6 @@ form.sign-in-form {
 }
 
 .accordionHeader {
-  background-color: #f9f9f9;
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -715,6 +715,21 @@ form.sign-in-form {
   cursor: pointer;
   font-size: 1.2rem;
   font-weight: bold;
+  border-radius: 5px 5px 0 0;
+}
+.accordionHeader.completedmod{
+  background-color: #e6ffe6;
+  border: 1px solid #4caf50;
+}
+.accordionHeader.unlockedmod{
+  background-color: #f0e6ff;
+  border: 1px solid #9b59b6;
+}
+.accordionHeader.lockedmod{
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  color: #aaa;
+  cursor: not-allowed;
 }
 
 .accordionHeader h2 {
@@ -728,32 +743,58 @@ form.sign-in-form {
 }
 
 .accordionContent {
-  background-color: #fff;
-  padding: 15px;
+  background-color: #f9f9f9; /* Soft background for contrast */
+  padding: 20px;
   border-top: 1px solid #ddd;
   font-size: 1rem;
+  border-radius: 0 0 5px 5px; /* To match the accordion header's rounded top corners */
+  transition: all 0.3s ease; /* Smooth transition */
 }
 
 .accordionContent p {
-  margin: 0 !important;
+  margin: 10px 0 !important; /* Add spacing between paragraphs */
+  line-height: 1.6; /* Improve readability */
+  color: #555; /* Softer text color */
 }
 
 .accordionContent button {
-  padding: 7px 15px;
-  background-color: transparent;
-  border: 2px solid var(--maincolor);
-  color: var(--maincolor);
+  padding: 10px 20px; /* Increase button padding */
+  background-color: #4caf50; /* Default button background */
+  border: none; /* Remove the border */
+  color: white;
   cursor: pointer;
-  margin: 10px 0;
-  transition: 0.4s;
+  margin: 10px 5px; /* Add some spacing around buttons */
+  font-size: 0.9rem; /* Slightly reduce font size */
   text-transform: uppercase;
   font-family: var(--subfont);
   font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover transitions */
 }
+
 .accordionContent button:hover {
-  background-color: var(--maincolor);
-  color: white;
+  background-color: #388e3c; /* Darken button on hover */
+  transform: translateY(-2px); /* Slight button lift on hover */
 }
+
+/* Additional button variants for different actions */
+.accordionContent .takeQuizBtn {
+  background-color: #ff9800; /* Orange for quiz-related actions */
+}
+
+.accordionContent .takeQuizBtn:hover {
+  background-color: #f57c00; /* Darker on hover */
+}
+
+.accordionContent .resumeBtn {
+  background-color: #03a9f4; /* Blue for resume-related actions */
+}
+
+.accordionContent .resumeBtn:hover {
+  background-color: #0288d1; /* Darker on hover */
+}
+
+
 
 /* Pages */
 
@@ -1514,7 +1555,19 @@ form.sign-in-form {
   font-family: var(--subfont);
 }
 
-.lesson-icon {
+.lesson-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+}
+.lesson-icon p{
+  margin: 0 !important;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.lesson-icon svg{
   font-size: 24px;
 }
 
